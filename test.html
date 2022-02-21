@@ -5,8 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .js{
+            color:rosybrown;
+
+        }
+    </style>
+    <script>
+        function nightDayHandler(test1){
+            var target = document.querySelector('body');
+            if(test1.value === 'night'){
+                target.style.backgroundColor='black';
+                target.style.color='white';
+                test1.value = 'day';
+            }else{
+                target.style.backgroundColor='white';
+                target.style.color='black';
+                test1.value = 'night';
+
+            }
+        }  
+    </script>
 </head>
 <body>
-    <h1>hello</h1>
+    <input type="button" value="night" onclick="nightDayHandler(this)">
+    <input type="button" value="hi" onclick="alert('hi')">
+    <input type="text" onchange="alert('changed')">
+    <input type="text" onkeydown="alert('key down')">
+
+    <h1 style="color:powderblue;background-color: coral;">JavaScript</h1>
+    <script>
+        document.write(1+1)
+    </script>
+
+    <h1>HTML</h1>
+    <span class="js">1+1</span>
+
+    <input type="button" value="night" onclick="nightDayHandler(this)">
+    <a herf="#">1</a>
+    <a herf="#">2</a>
+    <a herf="#">3</a>
+    <a herf="#">4</a>
+    <script>
+        var coworkers = {
+            "programmer":"jamie",
+            "designer":"sipyuktu"
+
+        };
+        document.write("progrmer : "+coworkers.programmer +'<b<<r>');
+        coworkers.otk = 'rh';
+        document.write(coworkers.otk+'<br>');
+
+    </script>
+
+    <h2>Method</h2>
+    <script>
+        coworkers.showall = function(){        
+            for(var key in coworkers){
+                document.write(key+" : "+this[key] +'<br>');
+            }
+        }
+
+        coworkers.showall()
+
+    </script>
 </body>
 </html>
